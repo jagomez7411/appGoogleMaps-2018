@@ -13,8 +13,7 @@ $('#posicion').on ('click', function (){
 	
 $('#watch').on('click', function (){
 	watchPosition();
-});
-	
+});	
 }
 
 	function getPosition() {
@@ -43,30 +42,22 @@ $('#watch').on('click', function (){
    }
 }
 
-function watchPosition() {
+//
+//function watchPosition() {
+//<div id="googleMap" style="width:100%;height:400px;"></div>
 
-   var options = {
-      maximumAge: 3600000,
-      timeout: 3000,
-      enableHighAccuracy: true,
-   }
+//<script>
+//function myMap() {
+//var mapProp= {
+//    center:new google.maps.LatLng(18.90383,-98.4245731),
+//    zoom:19,
+//};
+//var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+//}
+<!--</script>-->
 
-   var watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
+//<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFd0aiE5FttY8XRAFI9ecTSpgo2vP-qMk&callback=myMap"></script>
 
-   function onSuccess(position) {
+  
 
-$('#latitud').html(position.coords.latitude);
-$('#longitud').html(position.coords.longitude);
-$('#altitud').html(position.coords.altitude);
-$('#accuracy').html(position.coords.accuracy);
-$('#aaccuracy').html(position.coords.altitudeAccuracy);
-$('#headingg').html(position.coords.heading);
-$('#speed').html(position.coords.speed);
-$('#timestamp').html(position.timestamp);
-   };
-
-   function onError(error) {
-      alert('code: '    + error.code    + '\n' +'message: ' + error.message + '\n');
-   }
-
-}
+//}
