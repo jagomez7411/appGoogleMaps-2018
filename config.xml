@@ -5,7 +5,7 @@
      id = "com.phonegap.app9" 
      version  = "1.0.0">  
 	 
-   <name> app9 Geolocalizacion 2018</name>  
+   <name> app2R Geolocalizacion con google maps</name>  
    
    <description>  
      Muestra la ubicacion del dispositivo de acuerdo al GPS
