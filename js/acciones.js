@@ -12,7 +12,7 @@ $('#posicion').on ('click', function (){
 	});
 	
 $('#watch').on('click', function (){
-	watchPosition();
+	showPosition();
 });	
 }
 
@@ -42,22 +42,14 @@ $('#watch').on('click', function (){
    }
 }
 
-//
-//function watchPosition() {
-//<div id="googleMap" style="width:100%;height:400px;"></div>
+function showPosition(position){
+  latitud=position.coords.latitude;
+  longitud=position.coords.longitude;
+  d.innerHTML+="<p>Latitud: "+latitud+"</p>";
+  d.innerHTML+="<p>Longitud: "+longitud+"</p>";
+  latlon=latitud+","+longitud;
+  var img_url="http://maps.googleapis.com/maps/api/staticmap?center="
+     +latlon+"&zoom=14&size=350x250&sensor=false";
+  d.innerHTML+="<img src='"+img_url+"'>";
+}
 
-//<script>
-//function myMap() {
-//var mapProp= {
-//    center:new google.maps.LatLng(18.90383,-98.4245731),
-//    zoom:19,
-//};
-//var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-//}
-<!--</script>-->
-
-//<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFd0aiE5FttY8XRAFI9ecTSpgo2vP-qMk&callback=myMap"></script>
-
-  
-
-//}
