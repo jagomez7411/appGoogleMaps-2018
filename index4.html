@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Documento sin título</title>
+<title>Mapa de google maps</title>
 </head>
 
 <body>
@@ -19,7 +19,7 @@ function mostrarUbicacion(position) {
     var altitud = position.coords.altitude;	
 	var exactitud = position.coords.accuracy;	
 	var div = document.getElementById("ubicacion");
-	div.innerHTML = "Timestamp: " + times + "<br>Latitud: " + latitud + "<br>Longitud: " + longitud + "<br>Altura en metros: " + altitud + "<br>Exactitud: " + exactitud;}	
+	div.innerHTML = "Latitud: " + latitud + "<br>Longitud: " + longitud;}	
 function refrescarUbicacion() {	
 	navigator.geolocation.watchPosition(mostrarUbicacion);}	
 </script>
